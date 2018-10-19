@@ -1,8 +1,9 @@
+//Let’s start writing our example codes with customary Hello World application.
+// In this application, I will create a PDF file with a single statement in content.
 package uz.coder.iText;
 
 import com.itextpdf.text.Document;
 import com.itextpdf.text.Paragraph;
-import com.itextpdf.text.pdf.PdfDocument;
 import com.itextpdf.text.pdf.PdfWriter;
 
 import java.io.FileOutputStream;
