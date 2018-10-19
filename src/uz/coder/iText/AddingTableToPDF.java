@@ -17,8 +17,16 @@ public class AddingTableToPDF {
         //Creating pdf object
         PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream(file));
         document.open();
-        document.add(new Paragraph("Razakov Azamat Xusenovich"));
+        document.add(new Paragraph("coding is fun"));
+
+        // Set attributes here
+        document.addAuthor("Coder");
+        document.addCreationDate();
+        document.addCreator("www.coder.uz");
+        document.addTitle("Set Attribute Example");
+        document.addSubject("An example to show how attributes can be added to pdf files.");
         document.close();
+        writer.close();
     }
 
 }
