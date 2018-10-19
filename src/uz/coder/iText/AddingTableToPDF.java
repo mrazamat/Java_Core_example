@@ -3,6 +3,7 @@
 package uz.coder.iText;
 
 import com.itextpdf.text.Document;
+import com.itextpdf.text.Image;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.PdfWriter;
 
@@ -25,6 +26,21 @@ public class AddingTableToPDF {
         document.addCreator("www.coder.uz");
         document.addTitle("Set Attribute Example");
         document.addSubject("An example to show how attributes can be added to pdf files.");
+
+        //Add Image
+        Image image1 = Image.getInstance("/home/coder/Desktop/java.jpg");
+        //Fixed Positioning
+        image1.setAbsolutePosition(80f,250f);
+        image1.scaleAbsolute(600,400);
+        document.add(image1);
+
+        //Add Image
+        Image image2 = Image.getInstance("/home/coder/Desktop/logo.png");
+        //Fixed Positioning
+        image1.setAbsolutePosition(80f,250f);
+        image1.scaleAbsolute(600,400);
+        document.add(image2);
+
         document.close();
         writer.close();
     }
